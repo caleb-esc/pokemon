@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        <link rel="icon" href="https://h-cda.pages.dev/src/lib/images/GBA_3_main.png" type="image/x-icon"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <style>
+            body, html {
+                height: 100%;
+            }
+
+            body {
+                font-family: monospace;
+                font-weight: bold;
+                font-size: 20px;
+                margin: 0;
+                overflow: hidden;
+                background-color: #222;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #display {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="display">
+            <div id="game"></div>
+        </div>
+
+        <script>
+            window.EJS_player = "#game";
+            window.EJS_gameName = "Pokemon Emerald";
+            window.EJS_biosUrl = "";
+            window.EJS_gameUrl = "https://h-cda.pages.dev/Pokemon Sapphire 1.gba";
+            window.EJS_core = "gba";
+            window.EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+            window.EJS_startOnLoaded = true;
+
+            const script = document.createElement("script");
+            script.src = "https://cdn.emulatorjs.org/stable/data/loader.js";
+            document.body.appendChild(script);
+        </script>
+    </body>
+</html>
